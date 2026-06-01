@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="test.css" />
+</head>
+<body>
+  <div class="quiz-container">
+
+    <div class="quiz-header" id="init-box">
+      <select id="category-select" class="dropdown">
+        <option value="" disabled selected>Select Category</option>
+        <option value="9">General Knowledge</option>
+        <option value="17">Science & Nature</option>
+        <option value="21">Sports</option>
+        <option value="23">History</option>
+      </select>
+
+      <select id="difficulty-select" class="dropdown">
+        <option value="" disabled selected>Select Difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <button id="start-btn" disabled>Start Quiz</button>
+    </div>
+
+    <h1>OUR OWN QUIZ</h1>
+    <h2 id="high-score-display">High Score: 0</h2>
+
+    <div id="quiz-box" class="hide">
+      <div id="question_and_timer">
+        <p class="question-number">Question <span id="current-question">1</span></p>
+        <div id="timer-display">Time left: <span id="time">15</span>s</div>
+      </div>
+
+      <h2 id="question" class="fade">Loading Question...</h2>
+      <div id="answers" class="answer-container"></div>
+
+      <button id="next-btn" class="hide">Next Question</button>
+    </div>
+
+    <div id="result-box" class="hide">
+      <h2>Your Score</h2>
+      <p id="score-text"></p>
+      <button id="restart-btn">Restart Quiz</button>
+    </div>
+
+    <button id="dark-mode-btn">Toggle Dark Mode</button>
+  </div>
+
+  <script src="test.js"></script>
+</body>
+</html>
